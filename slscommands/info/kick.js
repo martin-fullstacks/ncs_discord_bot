@@ -35,8 +35,6 @@ module.exports = {
         const reason = interaction.options.getString("reason");
         const member = interaction.guild.members.cache.get(target.id);
 
-        console.log(member.kickable);
-        console.log(target);
 
         if (!member.kickable)
             return interaction.followUp("Cette utilisateur ne peut pas etre kick!");
