@@ -37,7 +37,7 @@ module.exports = {
 
 
         if (!member.kickable)
-            return interaction.followUp("Cette utilisateur ne peut pas etre kick!");
+            return interaction.followUp("This user can't be kick !");
         member.kick(reason);
         await interaction.channel.send(
             `User ${target} successfully kicked for: ${reason}`
