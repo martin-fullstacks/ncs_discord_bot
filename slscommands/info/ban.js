@@ -1,7 +1,7 @@
 
 module.exports = {
     name: "ban",
-    description: "Ban a user based on a reason!",
+    description: "This command is to ban people.",
     permissions: ["BAN_MEMBERS"],
     type: 1,
     options: [

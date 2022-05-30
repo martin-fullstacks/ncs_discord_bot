@@ -1,17 +1,9 @@
-const {
-    Client,
-    CommandInteraction,
-    MessageEmbed,
-    MessageActionRow,
-    MessageButton,
-    Message,
-} = require("discord.js");
 
 const wait = require("util").promisify(setTimeout);
 
 module.exports = {
     name: "kick",
-    description: "Kick a user based on a reason!",
+    description: "This command is to kick people.",
     permissions: ["KICK_MEMBERS"],
     type: 1,
     options: [
