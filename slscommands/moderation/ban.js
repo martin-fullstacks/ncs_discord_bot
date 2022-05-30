@@ -21,7 +21,7 @@ module.exports = {
 
     run: async (client, interaction, args) => {
 
-        const target = interaction.options.getUser("target");
+        const target = interaction.options.getMember("target");
         const reason = interaction.options.getString("reason");
 
 
