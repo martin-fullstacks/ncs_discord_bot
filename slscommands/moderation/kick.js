@@ -1,6 +1,3 @@
-
-const wait = require("util").promisify(setTimeout);
-
 module.exports = {
     name: "kick",
     description: "This command is to kick people.",
