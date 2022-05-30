@@ -1,13 +1,3 @@
-const {
-    Client,
-    CommandInteraction,
-    MessageEmbed,
-    MessageActionRow,
-    MessageButton,
-    Message,
-} = require("discord.js");
-
-const wait = require("util").promisify(setTimeout);
 
 module.exports = {
     name: "ban",
