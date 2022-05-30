@@ -36,7 +36,7 @@ module.exports = {
 
         if (!target.bannable)
             return interaction.followUp("This user can't be ban");
-        target.ban({ reason );
+        target.ban({ reason });
         await interaction.channel.send(
             `User ${target} successfully banned for: ${reason}`
         );
