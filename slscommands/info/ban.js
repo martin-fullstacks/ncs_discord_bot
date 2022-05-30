@@ -32,13 +32,11 @@ module.exports = {
     run: async (client, interaction, args) => {
 
         const target = interaction.options.getUser("target");
-        const reason = interaction.options.getString("reason");
-        const member = interaction.guild.members.cache.get(target.id);
 
 
-        if (!member.bannable)
+        if (!target.bannable)
             return interaction.followUp("This user can't be ban");
-        member.ban({ reason );
+        target.ban({ reason );
         await interaction.channel.send(
             `User ${target} successfully banned for: ${reason}`
         );

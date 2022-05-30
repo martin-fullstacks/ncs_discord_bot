@@ -31,14 +31,13 @@ module.exports = {
 
     run: async (client, interaction, args) => {
 
-        const target = interaction.options.getUser("target");
+        const target = interaction.options.getMember('target');
         const reason = interaction.options.getString("reason");
-        const member = interaction.guild.members.cache.get(target.id);
 
 
-        if (!member.kickable)
+        if (!target.kickable)
             return interaction.followUp("This user can't be kick !");
-        member.kick(reason);
+        target.kick(reason);
         await interaction.channel.send(
             `User ${target} successfully kicked for: ${reason}`
         );
