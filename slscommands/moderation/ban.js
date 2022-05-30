@@ -22,6 +22,7 @@ module.exports = {
     run: async (client, interaction, args) => {
 
         const target = interaction.options.getUser("target");
+        const reason = interaction.options.getString("reason");
 
 
         if (!target.bannable) return interaction.followUp("This user can't be ban");
