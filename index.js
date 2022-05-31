@@ -19,6 +19,9 @@ const client = new Client({
 });
 module.exports = client;
 
+const wait = require("util").promisify(setTimeout);
+
+
 const config = require("./settings/config.json");
 const prefix = config.prefix;
 
@@ -34,3 +37,60 @@ client.categories = fs.readdirSync("./commands/");
 });
 
 client.login(process.env.TOKEN);
+
+client.on("interactionCreate", async (interaction) => {
+  if (!interaction.isSelectMenu()) return;
+  if (interaction.customId === "select") {
+    await interaction.deferUpdate();
+    await wait(1000);
+    if (interaction.values[0] === "first_option") {
+      const member = await interaction.guild.members.fetch(interaction.user.id);
+      const role = interaction.guild.roles.cache.get(config.roles.role);
+
+      if (
+          interaction.member.roles.cache.some(
+              (role) => role.id === config.roles.role
+          )
+      ) {
+        return await interaction.followUp({
+          content: "You have already this role !",
+          ephemeral: true,
+        });
+      }
+
+      await member.roles.add(role);
+
+      const embed_reply = new MessageEmbed().setDescription("Role added.");
+
+      await interaction.followUp({
+        embeds: [embed_reply],
+        ephemeral: true,
+      });
+    } else if (interaction.values[0] === "second_option") {
+      const member = await interaction.guild.members.fetch(interaction.user.id);
+      const role = interaction.guild.roles.cache.get(config.roles.role2);
+
+      if (
+          interaction.member.roles.cache.some(
+              (role) => role.id === config.roles.role2
+          )
+      ) {
+        return await interaction.followUp({
+          content: "You have already this role !",
+          ephemeral: true,
+        });
+      }
+
+      await member.roles.add(role);
+
+      const embed_reply = new MessageEmbed().setDescription("Role added.");
+
+      await interaction.followUp({
+        embeds: [embed_reply],
+        ephemeral: true,
+      });
+    }
+  }
+});
+
+
