@@ -55,6 +55,7 @@ client.on("interactionCreate", async (interaction) => {
           content: "You have already this role !",
           ephemeral: true,
         });
+        await member.roles.remove(role)
       }
 
       await member.roles.add(role);
@@ -78,6 +79,7 @@ client.on("interactionCreate", async (interaction) => {
           content: "You have already this role !",
           ephemeral: true,
         });
+        await member.roles.remove(role2)
       }
 
       await member.roles.add(role);
