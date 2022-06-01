@@ -54,16 +54,12 @@ client.on("interactionCreate", async (interaction) => {
         const member = await interaction.guild.members.fetch(interaction.user.id);
 
         let hasAlreadyRole = false;
-        for (const value in interaction.values) {
-            console.log(interaction.values[0]);
+        for (const value of interaction.values) {
+            console.log(interaction.values);
             console.log("Value " + value);
-            const role = interaction.guild.roles.cache.get(interaction.values[0]);
+            const role = interaction.guild.roles.cache.get(value);
             console.log("Role " + role);
-            if (
-                interaction.member.roles.cache.some(
-                    (role) => role.id === interaction.values[0]
-                )
-            ) {
+            if (interaction.member.roles.cache.some((role) => role.id === value)) {
                 hasAlreadyRole = true;
                 await member.roles.remove(role);
             } else {
@@ -76,4 +72,5 @@ client.on("interactionCreate", async (interaction) => {
                 : "Roles have been successfully added",
             ephemeral: true,
         });
+    }
 });
