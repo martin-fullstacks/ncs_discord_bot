@@ -36,7 +36,7 @@ module.exports = {
             )
             .setColor("36393F");
 
-        await interaction.followUp({
+        await interaction.reply({
             emebeds: [embed],
             components: [row],
         });
