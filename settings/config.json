@@ -3,8 +3,5 @@
   "embed": {
     "color": "#4D6FFF"
   },
-  "roles": {
-    "role": "Role id.",
-    "role2": "Role id."
-  }
+  "roles": ["RoleId1", "RoleId2", "RoleId3"]
 }

@@ -38,7 +38,7 @@ client.on("interactionCreate", async (interaction) => {
                     ],
                 });
             }
-            cmd.run(client, interaction, args);
+            cmd.run(client, interaction, args, config);
         }
     }
 

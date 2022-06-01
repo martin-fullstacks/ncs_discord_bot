@@ -9,7 +9,7 @@ module.exports = {
     description: "Messsage to pop the menu.",
     permissions: ["SEND_MESSAGES", "MANAGE_MESSAGES"],
 
-    run: async (client, interaction, args) => {
+    run: async (client, interaction, args, config) => {
 
 
         const row = new MessageActionRow().addComponents(
