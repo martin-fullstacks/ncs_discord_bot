@@ -1,14 +1,16 @@
+const {
+    MessageActionRow,
+    MessageSelectMenu,
+    MessageEmbed,
+} = require("discord.js");
+
 module.exports = {
     name: "menu",
     description: "Messsage to pop the menu.",
     permissions: ["SEND_MESSAGES", "MANAGE_MESSAGES"],
 
     run: async (client, interaction, args) => {
-        const {
-            MessageActionRow,
-            MessageSelectMenu,
-            MessageEmbed,
-        } = require("discord.js");
+
 
         const row = new MessageActionRow().addComponents(
             new MessageSelectMenu()
