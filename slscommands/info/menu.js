@@ -20,12 +20,17 @@ module.exports = {
                     {
                         label: "Test role 1",
                         description: "Add role 1",
-                        value: "first_option",
+                        value: config.roles[1],
                     },
                     {
                         label: "Test role 2",
                         description: "Add role 2",
-                        value: "second_option",
+                        value: config.roles[2],
+                    },
+                    {
+                        label: "Test role 3",
+                        description: "Add role 3",
+                        value: config.roles[3],
                     },
                 ])
         );
