@@ -3,5 +3,21 @@
   "embed": {
     "color": "#4D6FFF"
   },
-  "roles": ["RoleId1", "RoleId2", "RoleId3"]
+  "roles": [
+    {
+      "label": "Test role 1",
+      "description": "Add role 1",
+      "value": "ROLE_ID"
+    },
+    {
+      "label": "Test role 2",
+      "description": "Add role 2",
+      "value": "ROLE_ID_2"
+    },
+    {
+      "label": "Test role 2",
+      "description": "Add role 1",
+      "value": "ROLE_ID_3"
+    }
+  ]
 }

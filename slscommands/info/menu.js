@@ -1,5 +1,4 @@
 const { CommandInteraction, Client, Message } = require("discord.js");
-// const { config } = require("dotenv");
 const wait = require("util").promisify(setTimeout);
 
 module.exports = {
@@ -20,23 +19,7 @@ module.exports = {
                 .setPlaceholder("Choose a category.")
                 .setMinValues(1)
                 .setMaxValues(config.roles.length)
-                .addOptions([
-                    {
-                        label: "Test role 1",
-                        description: "Add role 1",
-                        value: config.roles[0],
-                    },
-                    {
-                        label: "Test role 2",
-                        description: "Add role 2",
-                        value: `${config.roles[1]}`,
-                    },
-                    {
-                        label: "Test role 3",
-                        description: "Add role 3",
-                        value: `${config.roles[2]}`,
-                    },
-                ])
+                .addOptions(config.roles)
         );
 
         const embed = new MessageEmbed()
