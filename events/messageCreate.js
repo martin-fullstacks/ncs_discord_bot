@@ -9,9 +9,7 @@ client.on("messageCreate", async (message) => {
     if (message.channel.partial) await message.channel.fetch();
     if (message.partial) await message.fetch();
     if (message.content.includes("<@" + client.user.id + ">")) {
-        message.channel.send(
-            "Salut je suis le bot de NextCitizens ! Que puis-je faire pour toi ? :) Pour plus d'infos -> `/help`"
-        );
+        message.channel.send(config.help_mesage);
     }
     const args = message.content.slice(prefix.length).trim().split(/ +/);
     const cmd = args.shift().toLowerCase();
