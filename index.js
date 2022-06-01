@@ -19,8 +19,7 @@ const client = new Client({
 });
 module.exports = client;
 
-const wait = require("util").promisify(setTimeout);
-
+const { setTimeout: sleep } = require('node:timers/promises');
 
 const config = require("./settings/config.json");
 const prefix = config.prefix;
@@ -42,7 +41,7 @@ client.on("interactionCreate", async (interaction) => {
   if (!interaction.isSelectMenu()) return;
   if (interaction.customId === "select") {
     await interaction.deferUpdate();
-    await wait(1000);
+    await sleep(1000);
     if (interaction.values[0] === "first_option") {
       const member = await interaction.guild.members.fetch(interaction.user.id);
       const role = interaction.guild.roles.cache.get(config.roles.role);
