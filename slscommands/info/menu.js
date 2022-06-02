@@ -2,8 +2,8 @@ const { CommandInteraction, Client, Message } = require("discord.js");
 const wait = require("util").promisify(setTimeout);
 
 module.exports = {
-    name: "menu2",
-    description: "ee",
+    name: "menu",
+    description: "Command to pop the menu.",
     permissions: ["SEND_MESSAGES", "MANAGE_MESSAGES"],
 
     run: async (client, interaction, args, config) => {
