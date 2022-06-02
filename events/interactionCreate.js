@@ -55,10 +55,7 @@ client.on("interactionCreate", async (interaction) => {
 
         let hasAlreadyRole = false;
         for (const value of interaction.values) {
-            console.log(interaction.values);
-            console.log("Value " + value);
             const role = interaction.guild.roles.cache.get(value);
-            console.log("Role " + role);
             if (interaction.member.roles.cache.some((role) => role.id === value)) {
                 hasAlreadyRole = true;
                 await member.roles.remove(role);
