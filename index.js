@@ -19,8 +19,6 @@ const client = new Client({
 });
 module.exports = client;
 
-const { setTimeout: sleep } = require('node:timers/promises');
-
 const config = require("./settings/config.json");
 const prefix = config.prefix;
 

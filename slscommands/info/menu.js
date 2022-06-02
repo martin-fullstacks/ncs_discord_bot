@@ -1,17 +1,10 @@
-const { CommandInteraction, Client, Message } = require("discord.js");
-const wait = require("util").promisify(setTimeout);
-
+const { MessageActionRow, MessageSelectMenu, MessageEmbed} = require("discord.js");
 module.exports = {
     name: "menu",
     description: "Command to pop the menu.",
     permissions: ["SEND_MESSAGES", "MANAGE_MESSAGES"],
 
     run: async (client, interaction, args, config) => {
-        const {
-            MessageActionRow,
-            MessageSelectMenu,
-            MessageEmbed,
-        } = require("discord.js");
 
         const row = new MessageActionRow().addComponents(
             new MessageSelectMenu()
@@ -28,7 +21,7 @@ module.exports = {
             )
             .setColor("36393F");
 
-        await interaction.followUp({
+        await interaction.reply({
             emebeds: [embed],
             components: [row],
         });
