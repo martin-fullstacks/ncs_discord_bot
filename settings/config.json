@@ -3,6 +3,9 @@
   "embed": {
     "color": "#4D6FFF"
   },
+  "channelMessagejoin": "",
+  "channelMessageleav": ""
+  },
   "roles": [
     {
       "label": "Test role 1",
