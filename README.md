@@ -54,7 +54,8 @@ Path : `./settings/config.json`
     }
   ],
   "channelMessagejoin": "981577652332822538",
-  "channelMessageleav": "981577652332822538"
+  "channelMessageleav": "981577652332822538",
+  "botStatusMessage": "the devs."
 }
 ````
 
@@ -71,5 +72,7 @@ Path : `./settings/config.json`
 |  |                                                                |    |  |
 | channelMessagejoin | Need to be an id of a channel (when the user join the server)  | None | `True`                         |
 | channelMessageleav | Need to be an id of a channel (when the user leave the server) | None | `True`                         |
+| botStatusMessage | Discord status of your bot                                     | None | `True`                         |
+
 
 

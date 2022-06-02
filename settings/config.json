@@ -2,6 +2,5 @@
   "prefix": "$",
   "embed": {
     "color": "#4D6FFF"
-  },
-  "help_mesage": "Hey i'm the bot of NextCitizens ! Try `/help` to have more informations."
+  }
 }
