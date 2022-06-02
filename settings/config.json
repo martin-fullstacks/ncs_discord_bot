@@ -2,5 +2,6 @@
   "prefix": "$",
   "embed": {
     "color": "#4D6FFF"
-  }
+  },
+  "botStatusMessage": "the devs"
 }
