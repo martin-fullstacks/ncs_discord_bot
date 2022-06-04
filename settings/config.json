@@ -3,5 +3,24 @@
   "embed": {
     "color": "#4D6FFF"
   },
+  "channelMessagejoin": "",
+  "channelMessageleave": "",
+  "roles": [
+    {
+      "label": "Test role 1",
+      "description": "Add role 1",
+      "value": "981653642262245426"
+    },
+    {
+      "label": "Test role 2",
+      "description": "Add role 2",
+      "value": "981654026317856808"
+    },
+    {
+      "label": "Test role 2",
+      "description": "Add role 1",
+      "value": "981672486674513941"
+    }
+  ],
   "botStatusMessage": "the devs"
 }
