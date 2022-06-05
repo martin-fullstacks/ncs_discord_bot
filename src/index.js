@@ -1,6 +1,5 @@
 require('dotenv').config();
 const { Client, Collection } = require('discord.js');
-const fs = require('fs');
 const client = new Client({
   allowedMentions: {
     parse: ['roles', 'users'],
