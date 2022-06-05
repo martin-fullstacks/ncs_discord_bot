@@ -7,16 +7,16 @@ module.exports = {
   type: 1,
   options: [
     {
-     name: 'subject',
-     description: 'Specify a subdject.',
-     required: true,
-     type: 'STRING',
+      name: 'subject',
+      description: 'Specify a subdject.',
+      required: true,
+      type: 'STRING',
     },
     {
-        name: "channel",
-        description: "Specify a channel.",
-        required: false,
-        type: "CHANNEL",
+      name: "channel",
+      description: "Specify a channel.",
+      required: false,
+      type: "CHANNEL",
     },
 ],
 
