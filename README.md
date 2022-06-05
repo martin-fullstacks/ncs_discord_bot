@@ -64,7 +64,7 @@ Path : `./config.exemple.json` - Duplicate and rename it `config.json`
 |---|----------------------------------------------------------------|------|------------------------------|
 | prefix | This is the prefix of the bot.                                 | `$` | `True`                       |
 | color | The color of the embeds.                                       | `#4D6FFF` | `True`                       |
-| roles | This is only for the system of roles (with menu).              | None | `True if you use this sytem.` |
+| roles | This is only for the system of roles (with menu).              | None | `True if you use this system.` |
 |  |                                                                |    |  |
 | roles[].label | The name of the options.                                       | None | `True`                       |
 | roles[].description | The description of the options.                                | None | `True`                         |
