@@ -1,9 +1,9 @@
-const { MessageEmbed } = require("discord.js");
+const { MessageEmbed } = require('discord.js');
 
 module.exports = {
-    name: "poll",
-    description: "To make a poll.",
-    permissions: ["SEND_MESSAGES", "MANAGE_MESSAGES"],
+    name: 'poll',
+    description: 'To make a poll.',
+    permissions: ['SEND_MESSAGES', 'MANAGE_MESSAGES'],
     type: 1,
     options: [
         {
