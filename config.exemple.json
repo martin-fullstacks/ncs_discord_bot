@@ -3,8 +3,8 @@
   "embed": {
     "color": "#4D6FFF"
   },
-  "channelMessagejoin": "CHANNEL_ID",
-  "channelMessageleave": "CHANNEL_ID",
+  "channelMessageJoin": "CHANNEL_ID",
+  "channelMessageLeave": "CHANNEL_ID",
   "roles": [
     {
       "label": "Role 1",
