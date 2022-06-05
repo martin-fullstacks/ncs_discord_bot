@@ -9,6 +9,7 @@ client.on('messageCreate', async (message) => {
     if (message.channel.partial) await message.channel.fetch();
     if (!message.content.startsWith(prefix) || message.author.bot) return;
     if (message.partial) await message.fetch();
+    if (!message.content.startsWith(prefix) || message.author.bot) return;
     const args = message.content.slice(prefix.length).trim().split(/ +/);
     const cmd = args.shift().toLowerCase();
 
