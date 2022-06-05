@@ -33,12 +33,12 @@ module.exports = {
         })
         .setTimestamp();
     await interaction.editReply({
-        content: `✅ » Poll sucessfuly created in <#${pollChannel.id}>`,
-        fetchReply: true,
+      content: `✅ » Poll sucessfuly created in <#${pollChannel.id}>`,
+      fetchReply: true,
     });
     const selectChannel = client.channels.cache.get(pollChannel.id);
     const poll = await selectChannel.send({ embeds: [embed] });
-    poll.react("✅");
-    poll.react("❌");
-},
+    poll.react('✅');
+    poll.react('❌');
+  },
 };
