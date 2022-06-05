@@ -1,16 +1,16 @@
 const { MessageEmbed } = require('discord.js');
 
 module.exports = {
-name: 'poll',
-description: 'To make a poll.',
-permissions: ['SEND_MESSAGES', 'MANAGE_MESSAGES'],
-type: 1,
-options: [
+  name: 'poll',
+  description: 'To make a poll.',
+  permissions: ['SEND_MESSAGES', 'MANAGE_MESSAGES'],
+  type: 1,
+  options: [
     {
-        name: 'subject',
-        description: 'Specify a subdject.',
-        required: true,
-        type: "STRING",
+     name: 'subject',
+     description: 'Specify a subdject.',
+     required: true,
+     type: 'STRING',
     },
     {
         name: "channel",
