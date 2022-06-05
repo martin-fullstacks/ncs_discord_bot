@@ -28,7 +28,7 @@ TOKEN=yourtoken
 
 ## Config
 
-Path : `./config.exemple.json`
+Path : `./config.exemple.json` - Duplicate and rename it `config.json`
 
 ````json
 {
@@ -40,21 +40,21 @@ Path : `./config.exemple.json`
     {
       "label": "Test role 1",
       "description": "Add role 1",
-      "value": "981653642262245426"
+      "value": "ROLE_ID"
     },
     {
       "label": "Test role 2",
       "description": "Add role 2",
-      "value": "981654026317856808"
+      "value": "ROLE_ID_2"
     },
     {
       "label": "Test role 2",
-      "description": "Add role 1",
-      "value": "981672486674513941"
+      "description": "Add role 3",
+      "value": "ROLE_ID_3"
     }
   ],
-  "channelMessagejoin": "981577652332822538",
-  "channelMessageleav": "981577652332822538",
+  "channelMessagejoin": "CHANNEL_ID",
+  "channelMessageleav": "CHANNEL_ID",
   "botStatusMessage": "the devs."
 }
 ````
@@ -62,13 +62,13 @@ Path : `./config.exemple.json`
 
 | Key | Description                                                    | Default | Required                     |
 |---|----------------------------------------------------------------|------|------------------------------|
-| prefix | This is the prefix of the bot.                                 | None | `True`                       |
+| prefix | This is the prefix of the bot.                                 | `$` | `True`                       |
 | color | The color of the embeds.                                       | `#4D6FFF` | `True`                       |
 | roles | This is only for the system of roles (with menu).              | None | `True if you use this sytem.` |
 |  |                                                                |    |  |
-| label | The name of the options.                                       | None | `True`                       |
-| description | The description of the options.                                | None | `True`                         |
-| value | Need to be an id role, only.                                   | None | `True`                         |
+| roles[].label | The name of the options.                                       | None | `True`                       |
+| roles[].description | The description of the options.                                | None | `True`                         |
+| roles[].value | Need to be an id role, only.                                   | None | `True`                         |
 |  |                                                                |    |  |
 | channelMessagejoin | Need to be an id of a channel (when the user join the server)  | None | `True`                         |
 | channelMessageleav | Need to be an id of a channel (when the user leave the server) | None | `True`                         |
