@@ -28,7 +28,7 @@ TOKEN=yourtoken
 
 ## Config
 
-Path : `./settings/config.json`
+Path : `./config.exemple.json`
 
 ````json
 {
